@@ -56,7 +56,7 @@ if (localStorage.dataProducts) {
 }
 
 create.addEventListener("click", () => {
-  if (title.value !== "" && price.value !== "" && count.value < 100 && count.value != "0" && title.value !== "") {
+  if (title.value !== "" && price.value !== "" && count.value < 100 && count.value != "0" && category.value !== "") {
     nums = count.value ? count.value : 1;
     let objDataItem = {
       title: title.value,
