@@ -1,0 +1,225 @@
+/* -- Variables CSS -- */
+:root {
+  /* -- Colors -- */
+  --bg-color: #232324;
+  --con-color: #343539;
+  --f-color: #fff;
+  /* --c-color: #cbccce; */
+  --t-color: #535455;
+
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  line-height: var(--line-h);
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+input {
+  border: none;
+  outline: none;
+}
+
+/* -- Classes -- */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 576px) {
+  .container {
+    width: 80%;
+  }
+}
+.crud .head {
+  text-align: center;
+  padding: 20px 0 25px;
+  color: var(--f-color);
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.crud .head h1 {
+  font-size: 20px;
+}
+
+.crud .head h3 {
+  font-size: 18px;
+}
+
+.crud input {
+  width: 100%;
+  margin: 7px 0;
+  padding: 5px 7px;
+  color: var(--f-color);
+  background-color: var(--con-color);
+  font-size: 17px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.crud .inputs .title {
+  margin-bottom: 12px;
+}
+.crud input:focus {
+  outline: 2px solid #717171;
+}
+.crud .inputs .total {
+  background-color: rgb(111, 19, 19);
+  color: var(--f-color);
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 5px 7px;
+  position: relative;
+  display: block;
+  margin: 8px 0;
+  white-space: nowrap;
+}
+.crud .inputs .total::before {
+  content: "Total: ";
+}
+.crud button {
+  background-color: rgb(52, 38, 108);
+  text-align: center;
+  padding: 7px 10px;
+  color: var(--f-color);
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin: 8px 0;
+  text-transform: capitalize;
+}
+.crud button:hover {
+  background-color: rgb(83, 41, 165);
+}
+
+.crud .data {
+  margin-top: 20px;
+}
+
+.crud .data .delete-all {
+  margin-top: 15px;
+  display: none;
+}
+
+.crud .table {
+  color: var(--f-color);
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  border-collapse: collapse;
+}
+.crud .table tr {
+  margin-bottom: 7px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--t-color);
+}
+.crud .table tr th {
+  font-weight: normal;
+  text-transform: capitalize;
+  padding: 5px 0 10px;
+}
+.crud .table tr th,
+.crud .table tr td {
+  font-size: 12px;
+}
+.crud .table tr button {
+  font-size: 10px;
+}
+
+@media (max-width: 340px) {
+  .crud .table tr button {
+    font-size: 7px;
+    padding: 3px 5px;
+  }
+}
+@media (min-width: 768px) {
+  .crud .head h1 {
+    font-size: 22px;
+  }
+  .crud .head h3 {
+    font-size: 20px;
+  }
+  .crud .values-inputs {
+    display: flex;
+  }
+
+  .crud .values-inputs input:not(:last-child) {
+    margin-right: 10px;
+  }
+  .crud .c-inputs {
+    display: flex;
+  }
+  .crud .c-inputs input:first-child{
+    margin-right: 15px;
+  }
+  .crud .data .search-buts {
+    display: flex;
+  }
+  .crud .data .search-buts .s-title {
+    margin-right: 20px;
+  }
+  .crud .table tr th,
+  .crud .table tr td {
+    font-size: 16px;
+  }
+  .crud .table tr th {
+    font-weight: 600;
+  }
+  .crud .table tr td {
+    padding: 0px 3px;
+  }
+  .crud .table tr button {
+    font-size: 14px;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .crud .values {
+    display: flex;
+  }
+  .crud .inputs .total {
+    margin: 7px 0 7px 10px;
+  }
+}
