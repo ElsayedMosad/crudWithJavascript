@@ -236,4 +236,3 @@ function searchData(value) {
 }
 
 
-// console.log(JSON.parse(localStorage.getItem("dataPro")))
